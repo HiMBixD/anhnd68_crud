@@ -1,0 +1,25 @@
+<fis-user-header [title] = "title"></fis-user-header>
+<button class="btn btn-success" routerLink="../create" type="submit">create new</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let user of (usersList$ | async);">
+      <th scope="row">
+        {{user.id}}
+      </th>
+      <a [routerLink]="['/users', user.id]">
+        {{user.userName}}
+      </a>
+      <td>{{user.email}}</td>
+      <td>{{user.phoneNumber}}</td>
+    </tr>
+  </tbody>
+</table>

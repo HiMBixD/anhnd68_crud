@@ -1,0 +1,34 @@
+<fis-page-header [title] = "title"></fis-page-header>
+<form class="product-form" [formGroup]="productFrom" (ngSubmit)="onSave(productFrom)">
+  <div class="form-group" >
+    <label >Name</label>
+    <input type="text" class="form-control" formControlName="name">
+    <div *ngIf="name.errors?.required && name.touched" style=" color: red;">
+      Name is required.
+    </div>
+    <div *ngIf="name.errors?.minlength && name.touched" style=" color: red;">
+      Name must be at least 4 characters long.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label >Price</label>
+    <input id="price" type="number" class="form-control" formControlName="price">
+    <div *ngIf="price.errors?.required && price.touched" style=" color: red;">
+      Price is required.
+    </div>
+    <div *ngIf="price.errors?.maxlength && price.touched"style=" color: red;">
+      Price must be less than 5 characters long.
+    </div>
+  </div>
+  <div class="form-group">
+    <label >Quantity</label>
+    <input id="quantity" type="number" class="form-control" formControlName="quantity">
+    <div *ngIf="quantity.errors?.required && quantity.touched" style=" color: red;">
+      Quantity is required.
+    </div>
+  </div>
+
+  <button *ngIf="!checkExist" type="submit" class="btn btn-primary">Create new</button>
+  <button *ngIf="checkExist" type="submit" class="btn btn-primary">update</button>
+</form>

@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Nguyen Duc Anh",
+      "email": "Anhnd68@fpt",
+      "phoneNumber": "01098881327"
+    },
+    {
+      "id": 2,
+      "userName": "Nguyen Nam Anh",
+      "email": "Anhnn69@fpt",
+      "phoneNumber": "11199984555"
+    },
+    {
+      "id": 108,
+      "userName": "asdasdasd",
+      "email": "asdasdasd",
+      "phoneNumber": "asdasdasd"
+    },
+    {
+      "id": 101,
+      "userName": "asdasd",
+      "email": "qqqqq",
+      "phoneNumber": "2222"
+    },
+    {
+      "id": 107,
+      "userName": "asdasdasdasd",
+      "email": "123123",
+      "phoneNumber": "123123"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone4",
+      "price": 300,
+      "quantity": 10
+    },
+    {
+      "id": 2,
+      "name": "Nokia",
+      "price": 100,
+      "quantity": 15
+    },
+    {
+      "id": 3,
+      "name": "Nokia aa",
+      "price": 1000,
+      "quantity": 115
+    },
+    {
+      "id": 137,
+      "name": "asda",
+      "price": 123,
+      "quantity": 123
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<fis-user-header [title] = "title"></fis-user-header>
+<form class="product-form" [formGroup]="userForm" (ngSubmit)="onSave(userForm)">
+    <div class="form-group">
+      <label >User Name</label>
+      <input type="text" class="form-control" formControlName="userName">
+    </div>
+    <div class="form-group">
+      <label >Email</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label >Phone Number</label>
+      <input type="text" class="form-control" formControlName="phoneNumber">
+    </div>
+
+    <button *ngIf="!checkExist" type="submit" class="btn btn-primary">Create new</button>
+    <button *ngIf="checkExist" type="submit" class="btn btn-primary">update</button>
+  </form>

@@ -1,11 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
   {
-    path: 'product',
-    loadChildren: () => import('./product/product-routing.module').then(m=>m.ProductRoutingModule)
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
   }
 ];
 
